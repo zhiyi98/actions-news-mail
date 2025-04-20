@@ -1,0 +1,22 @@
+name: News Mail
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '30 23 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+  steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-java@v4
+      with:
+        distribution: 'corretto'
+        java-version: '8'
+    - run: sh ./bin/start.sh
+
+
