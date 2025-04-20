@@ -7,6 +7,11 @@ on:
   schedule:
     - cron: '30 23 * * *'
 
+env:
+  MAIL_PASSWORD: "${{ secrets.MAIL_PASSWORD }}"
+  MAIL_TO: "${{ secrets.MAIL_TO }}"
+  MAIL_USERNAME: "${{ secrets.MAIL_USERNAME }}"
+
 jobs:
   build:
     runs-on: ubuntu-22.04
