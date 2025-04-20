@@ -17,5 +17,4 @@ jobs:
         with:
           distribution: 'corretto'
           java-version: '8'
-      - run: cd bin
-      - run: sh start.sh
+      - run: sh ./bin/start.sh
